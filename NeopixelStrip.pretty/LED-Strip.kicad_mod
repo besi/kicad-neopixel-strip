@@ -1,0 +1,26 @@
+(module "LED-Strip" (layer F.Cu) (tedit 5EDD0E91)
+  (fp_text reference "REF**" (at 0 -2.921 unlocked) (layer F.SilkS)
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "LED-Strip" (at -2.54 -3.81 unlocked) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start 1.27 1.27) (end 1.524 0.8382) (layer F.SilkS) (width 0.12))
+  (fp_line (start 1.016 0.8382) (end 1.27 1.27) (layer F.SilkS) (width 0.12))
+  (fp_line (start 1.27 1.27) (end 1.016 0.8382) (layer F.SilkS) (width 0.12))
+  (fp_line (start 1.27 -1.27) (end 1.27 1.27) (layer F.SilkS) (width 0.12))
+  (fp_text user "Signal" (at 0 3.81 90 unlocked) (layer B.Paste) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user "VCC" (at -2.7432 2.54 90 unlocked) (layer B.Paste) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user "GND" (at 2.54 2.54 90 unlocked) (layer B.Paste) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start -4.318 0) (end -3.556 0) (layer F.SilkS) (width 0.12))
+  (fp_line (start -3.937 -0.381) (end -3.937 0.381) (layer F.SilkS) (width 0.12))
+  (pad "1" connect rect (at -2.54 0) (size 1.524 4) (layers "F.Cu" "F.Mask") (tstamp 08e6ba23-4e08-4497-ac79-34736bee7cc8))
+  (pad "2" connect oval (at 0 0) (size 1.524 4) (layers "F.Cu" "F.Mask") (tstamp 8115a4f0-94dc-48a0-a8f1-b7afd1217fb6))
+  (pad "3" connect oval (at 2.54 0) (size 1.524 4) (layers "F.Cu" "F.Mask") (tstamp f70c06af-641e-4b33-a4cf-3f6c661b0493))
+)
