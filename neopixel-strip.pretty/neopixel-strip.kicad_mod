@@ -1,34 +1,196 @@
-(footprint "LED-Strip" (version 20211014) (generator pcbnew)
-  (layer "F.Cu")
-  (tedit 5EDD0E91)
-  (attr through_hole)
-  (fp_text reference "REF**" (at 0.635 -2.921 unlocked) (layer "F.SilkS")
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp b0074992-8ab1-41d0-9680-52825ea6978c)
-  )
-  (fp_text value "LED-Strip" (at -2.54 -3.81 unlocked) (layer "F.SilkS") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp c1b1de6a-fd7d-4a32-a3af-525dcba5c272)
-  )
-  (fp_text user "VCC" (at -2.7432 2.54 90 unlocked) (layer "B.Paste") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 5de663fb-2619-4dcb-97a0-819d8ab0f382)
-  )
-  (fp_text user "Signal" (at 0 3.81 90 unlocked) (layer "B.Paste") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 775ec134-fdd6-4aa9-94b6-1d60e1accf62)
-  )
-  (fp_text user "GND" (at 2.54 2.54 90 unlocked) (layer "B.Paste") hide
-    (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp cd9b98c3-c69f-4bf5-8126-163189f1c47d)
-  )
-  (fp_line (start -5.207 -0.381) (end -5.207 0.381) (layer "F.SilkS") (width 0.12) (tstamp 0b2f8705-6ebd-4e99-a59f-73f1b84e2fa0))
-  (fp_line (start 1.905 -1.27) (end 1.905 1.27) (layer "F.SilkS") (width 0.12) (tstamp 3c575fab-48df-463b-a9e7-d8c6dc6e2758))
-  (fp_line (start 1.651 0.8382) (end 1.905 1.27) (layer "F.SilkS") (width 0.12) (tstamp 400508ad-efa1-44ce-916f-18fea0918a64))
-  (fp_line (start -5.588 0) (end -4.826 0) (layer "F.SilkS") (width 0.12) (tstamp 54385cf9-8b3b-48b2-9cb1-863593f18cc8))
-  (fp_line (start 1.905 1.27) (end 1.651 0.8382) (layer "F.SilkS") (width 0.12) (tstamp 9630a462-7985-4030-9a44-7cf34b2a240e))
-  (fp_line (start 1.905 1.27) (end 2.159 0.8382) (layer "F.SilkS") (width 0.12) (tstamp e7f0501f-10fa-4af0-9e0b-47492ce930d2))
-  (pad "1" connect rect (at -3.556 0) (size 1.524 4) (layers "F.Cu" "F.Mask") (tstamp 08e6ba23-4e08-4497-ac79-34736bee7cc8))
-  (pad "2" connect oval (at 0 0) (size 1.524 4) (layers "F.Cu" "F.Mask") (tstamp 8115a4f0-94dc-48a0-a8f1-b7afd1217fb6))
-  (pad "3" connect oval (at 3.556 0) (size 1.524 4) (layers "F.Cu" "F.Mask") (tstamp f70c06af-641e-4b33-a4cf-3f6c661b0493))
+(footprint "neopixel-strip"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.635 -2.921 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b0074992-8ab1-41d0-9680-52825ea6978c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "LED-Strip"
+		(at -2.54 -3.81 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "c1b1de6a-fd7d-4a32-a3af-525dcba5c272")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "357fffbf-fc6d-4182-8824-b43be2a1a5f0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0e970525-c521-45a8-b283-f17641441f28")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a47b895d-e716-44b5-b2f4-4db8e46565e2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -5.588 0)
+		(end -4.826 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "54385cf9-8b3b-48b2-9cb1-863593f18cc8")
+	)
+	(fp_line
+		(start -5.207 -0.381)
+		(end -5.207 0.381)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0b2f8705-6ebd-4e99-a59f-73f1b84e2fa0")
+	)
+	(fp_line
+		(start 1.651 0.8382)
+		(end 1.905 1.27)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "400508ad-efa1-44ce-916f-18fea0918a64")
+	)
+	(fp_line
+		(start 1.905 -1.27)
+		(end 1.905 1.27)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3c575fab-48df-463b-a9e7-d8c6dc6e2758")
+	)
+	(fp_line
+		(start 1.905 1.27)
+		(end 1.651 0.8382)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9630a462-7985-4030-9a44-7cf34b2a240e")
+	)
+	(fp_line
+		(start 1.905 1.27)
+		(end 2.159 0.8382)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e7f0501f-10fa-4af0-9e0b-47492ce930d2")
+	)
+	(fp_text user "VCC"
+		(at -2.7432 2.54 90)
+		(unlocked yes)
+		(layer "B.Paste")
+		(hide yes)
+		(uuid "5de663fb-2619-4dcb-97a0-819d8ab0f382")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "Signal"
+		(at 0 3.81 90)
+		(unlocked yes)
+		(layer "B.Paste")
+		(hide yes)
+		(uuid "775ec134-fdd6-4aa9-94b6-1d60e1accf62")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "GND"
+		(at 2.54 2.54 90)
+		(unlocked yes)
+		(layer "B.Paste")
+		(hide yes)
+		(uuid "cd9b98c3-c69f-4bf5-8126-163189f1c47d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" connect rect
+		(at -3.556 0)
+		(size 1.524 4)
+		(layers "F.Cu" "F.Mask")
+		(uuid "08e6ba23-4e08-4497-ac79-34736bee7cc8")
+	)
+	(pad "2" connect oval
+		(at 0 0)
+		(size 1.524 4)
+		(layers "F.Cu" "F.Mask")
+		(uuid "8115a4f0-94dc-48a0-a8f1-b7afd1217fb6")
+	)
+	(pad "3" connect oval
+		(at 3.556 0)
+		(size 1.524 4)
+		(layers "F.Cu" "F.Mask")
+		(uuid "f70c06af-641e-4b33-a4cf-3f6c661b0493")
+	)
+	(model "${KIPRJMOD}/lib/neopixel-strip/neopixel.step"
+		(offset
+			(xyz 5 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 90)
+		)
+	)
 )
